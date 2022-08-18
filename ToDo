@@ -1,65 +1,64 @@
-
-
                                               Cosas para hacer:
                                               ----------------
-   PRIORIDAD:
+
+PRIORIDAD:
 
        A               *    styles CSS
        ---------------------------------
        - [X] Hacer el Landing
        - [X] Hacer el Home
        - [X] Hacer el Recipes =>  - [ ] hacer una card con datos adicionales => + funcionalidad
-       - [X] Hacer el Form       
+       - [X] Hacer el Form
 
 
-       B               *    testing 
+       B               *    testing
       ---------------------------------
        - [X] Al menos tener un componente del frontend con sus tests respectivos
        - [X] Al menos tener una ruta del backend con sus tests respectivos
        - [X] Al menos tener un modelo de la base de datos con sus tests respectivos
-      
+
         => - [ ] Lo pautado esta, si me da para mas deberia ver que seran concisas esas respuestas del testing
         ver si puedo dedicarle una hora mas en otro momento
 
 
         A+             *    debuging - trubleshooting Back
       ------------------------------------
-        
-       
-        
-      
-       A+              *    debuging - trubleshooting Front 
-       ------------------------------------ 
-      
+
+
+
+
+       A+              *    debuging - trubleshooting Front
+       ------------------------------------
+
       - [X] Paginado
       - [X] RecipeDetail
 
       - [ ] RecipeCreate
 
-      
-                
+
+
        A               *    tratar de romperlo para ver validaciones y arreglar errores
        ------------------------------------
         - [X] Ver la clase de formularios controlados
-        - [ ] Se dice que es mejor hacer tanto validacion en el front como en el back  
-                  
+        - [ ] Se dice que es mejor hacer tanto validacion en el front como en el back
+
 
        B               *    aprender el funcionamiento de react completamente, uso de estados y hooks, back y promesas
        ------------------------------------
         - [ ] Ver clases
-        - [ ] Leer Documentacion   
-        - [ ] como pasar a promesas   
-        - [ ] metodos de sequelize   
-        - [ ] Buscar como se hace filtrado y ordenamiento desde el back, se me ocurre que es en las rutas con variables que podes cambiar pero no estoy seguro 
-        
+        - [ ] Leer Documentacion
+        - [ ] como pasar a promesas
+        - [ ] metodos de sequelize
+        - [ ] Buscar como se hace filtrado y ordenamiento desde el back, se me ocurre que es en las rutas con variables que podes cambiar pero no estoy seguro
 
-                  
+
+
 
        C               *    Buscar maneras de mejorarlo, con info o funcionalidades adicionales
        ------------------------------------
 
         - [ ] Poder ponerle like e ir a las favoritas
-                      ... una ruta mas 
+                      ... una ruta mas
                       ... trabajo con estados
                       ... crear boton y handler que suba a dicho estado
                       ... handle unlike
@@ -69,24 +68,24 @@
                       ... agarrar de la api y modificar para mapear en las cards
                       complejidad 4/10
 
-        - [ ] Receta random 
+        - [ ] Receta random
                       ... crear un boton
                       ... con logica que vaya a una receta random link a detail
                       ... ver como agarrar una random , por estado? por un array? como se hace random?
                       complejidad 7/10
-        - [ ] Ruta put 
-                      * se pide 
+        - [ ] Ruta put
+                      * se pide
                       ... crearla en el back
                       ... modifica una receta
-                      ... chequea con ifs 
+                      ... chequea con ifs
                       complejidad 7.5/10
         - [ ] Ruta delete
-                      *se pide 
+                      *se pide
                       ... boton que borre
                       ... logica que va al back y borra
                       complejidad 5/10
 
-        - [ ] Saber en que pagina estoy 
+        - [ ] Saber en que pagina estoy
                       ...investigar como hacer que la current page se pinte
                       ...hacerlo
                       complejidad 4/10
@@ -98,7 +97,7 @@
         - [ ] Footer
                       ... se puede gestionar
                       complejidad 4/10
-        - [ ] Contacto   
+        - [ ] Contacto
                       ...ruta nueva con unos headings nomas
                       ...pero es medio banana
                       complejidad 4/10
@@ -115,9 +114,9 @@
 
        A               *    Bugsitos
        ------------------------------------
-        - [ ] Forms a veces tachas y te dice recipe created ? 
-        - [ ] El searchbar del header solo muestra recetas si esta en home si no deberia redirigir y ahi cargarlas  
-        - [ ] Al cargar el home no hay filtrado entonces te muestra cualquiera pero en el fitrado dice a-z   
+        - [ ] Forms a veces tachas y te dice recipe created ?
+        - [ ] El searchbar del header solo muestra recetas si esta en home si no deberia redirigir y ahi cargarlas
+        - [ ] Al cargar el home no hay filtrado entonces te muestra cualquiera pero en el fitrado dice a-z
         - [ ] El boton de go back del detalle a veces esta lol? o es que no apreto en la pagina entonces serian 2 links ?
         - [ ] cuando cargas un detalle de receta queda por un rato la otra hasta que carga, habria q hacer que el dispatch se borre
         - [ ] Alertas!

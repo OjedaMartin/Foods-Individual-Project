@@ -9,6 +9,11 @@ export  function getRecipes (){
         })
     }
 }
+export function cleaner() {
+    return {
+        type: 'CLEANER'
+    }
+}
 
 export function deleteRecipe (id){
     return async function(dispatch){

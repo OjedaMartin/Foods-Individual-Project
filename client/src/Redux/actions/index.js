@@ -2,7 +2,7 @@ import axios from 'axios';
 
 export  function getRecipes (){
     return async function (dispatch){
-        let json = await axios.get("foodspi-backend.onrender.com/recipes");
+        let json = await axios.get("/api/recipes");
         return dispatch({
             type: 'GET_RECIPES',
             payload: json.data
@@ -18,7 +18,7 @@ export function cleaner() {
 export function deleteRecipe (id){
     return async function(dispatch){
         try{
-            let json = await axios.delete("foodspi-backend.onrender.com/delete/" + id);
+            let json = await axios.delete("/api/delete/" + id);
             return json;
         } catch (error) { 
             console.log(error)
@@ -28,7 +28,7 @@ export function deleteRecipe (id){
 export function getDetail (id){
     return async function (dispatch){
       try{
-        let json = await axios.get("foodspi-backend.onrender.com/recipes/" + id);
+        let json = await axios.get("/api/recipes/" + id);
         return dispatch({
             type: 'GET_DETAIL',
             payload: json.data
@@ -40,7 +40,7 @@ export function getDetail (id){
 }
 export function getDietTypes (){
     return async function (dispatch){
-        let json = await axios.get("foodspi-backend.onrender.com/diets");
+        let json = await axios.get("/api/diets");
         return dispatch({
             type: 'GET_DIET_TYPES',
             payload: json.data
@@ -49,7 +49,7 @@ export function getDietTypes (){
 }
 export function postRecipe (payload){
     return async function (dispatch){
-        let json = await axios.post("foodspi-backend.onrender.com/recipes",payload);
+        let json = await axios.post("/api/recipes",payload);
         return json;
     }
 }
@@ -68,7 +68,7 @@ export function Ordering(payload){
 export function getRecipeName(name){
     return async function (dispatch){
         try{
-            let json = await axios.get ("foodspi-backend.onrender.com/recipes?name=" + name)
+            let json = await axios.get ("/api/recipes?name=" + name)
             return dispatch({
                 type: 'GET_RECIPE_NAME',
                 payload: json.data 

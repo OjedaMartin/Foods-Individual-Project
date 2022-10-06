@@ -3,7 +3,6 @@ import { StyledHeader,Nav,Logo,StyledRecipeCreate,StyledA }  from './Styles/Styl
 import { Cont }  from './Styles/StyledContainer';
 import {Link} from 'react-router-dom';
 
-import SearchBar from './SearchBar';
 import GlobalStyles from "./Styles/Global";
 
 

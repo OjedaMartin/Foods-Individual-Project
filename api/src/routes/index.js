@@ -18,12 +18,10 @@ const getApiInfo = async () =>{
             name: e.title,
             image: e.image,
             dishType: e.dishTypes.map(e=> e),
-            shortDesc: e.summary,            
+            shortDesc: e.summary,
             healthScore: e.healthScore,
-            stepByStep: e.analyzedInstructions.map(e=> e), // arreglo de obj{number, step} maybe not 
-            dietName: e.diets.map(e=> e), //trae un arreglo con los tipos de dieta
-           
-
+            stepByStep: e.analyzedInstructions.map(e=> e), 
+            dietName: e.diets.map(e=> e),
         }
     });
     return apiInfo
@@ -55,7 +53,7 @@ const getAllRecepies = async () =>{
 
 
 
-router.get('/recipes',async (req, res)=>{
+router.get('/api/recipes',async (req, res)=>{
     let {name} = req.query
     let allRecipes = await getAllRecepies()
     
@@ -68,7 +66,7 @@ router.get('/recipes',async (req, res)=>{
         
 })
 
-router.get('/recipes/:id', async (req, res) => {
+router.get('/api/recipes/:id', async (req, res) => {
     const {id} = req.params
     const AllRecipes = await getAllRecepies()
     
@@ -79,7 +77,7 @@ router.get('/recipes/:id', async (req, res) => {
         
     }});
 
-router.delete('/delete/:id'), async(req,res)=>{
+router.delete('/api/delete/:id'), async(req,res)=>{
     const{id} = req.params
     
     await Recipe.destroy({
@@ -90,7 +88,7 @@ router.delete('/delete/:id'), async(req,res)=>{
 
 }    
     
-router.get('/diets', async (req,res)=>{
+router.get('/api/diets', async (req,res)=>{
     const diets = ['gluten free', 'dairy free','lacto ovo vegetarian','paleolithic','primal','whole 30','vegan','pescatarian','ketogenic','fodmap friendly'];
     const getDietsFromApi = await axios.get(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${API_KEY}&addRecipeInformation=true&number=100`)
     const _diets = getDietsFromApi.data.results.map(e=>e.diets)
@@ -105,7 +103,7 @@ router.get('/diets', async (req,res)=>{
     res.status(200).send(allDiets)
 })
 
-router.post('/recipes', async (req,res) =>{
+router.post('/api/recipes', async (req,res) =>{
     let {
         name,
         image,
@@ -135,7 +133,7 @@ router.post('/recipes', async (req,res) =>{
     });
 
 
-router.put('/recipes/:id', async (req,res) =>{
+router.put('/api/recipes/:id', async (req,res) =>{
     
     let {name,
         dishType,}      
